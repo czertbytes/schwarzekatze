@@ -1,0 +1,8 @@
+git clone https://github.com/kungfoo/geohash-java.git
+mvn package clean install
+
+<dependency>
+    <groupId>ch.hsr</groupId>
+    <artifactId>ch.hsr.geohash</artifactId>
+    <version>1.0.6</version>
+</dependency>

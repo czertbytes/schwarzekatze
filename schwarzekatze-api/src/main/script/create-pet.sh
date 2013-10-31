@@ -1,0 +1,1 @@
+curl -v -X POST -H "Accept: application/json" -H "Content-Type: application/json" -d '{"animal": "cat", "breed": "domestic", "gender": "male", "name": "taro", "age": "12"}' "http://localhost:8080/v1/pet"

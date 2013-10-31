@@ -1,0 +1,30 @@
+create user
+curl -v -X POST -H "Content-type: application/json" -d "{ \"username\":\"anyd1\", \"email\":\"anyd@anyd1.de\" }" "http://localhost:8080/v1/users"
+
+find all users
+curl -v "http://localhost:8080/v1/users"
+
+find user
+curl -v "http://localhost:8080/v1/users/1"
+
+create pet
+curl -v -X POST -H "Content-type: application/json" -d "{ \"animal\":\"cat\", \"breed\":\"domestic\", \"gender\":\"male\", \"name\":\"taro\", \"description\":\"blaa\", \"action\": { \"dateTime\":\"2012-08-01T13:22:34.000Z\", \"type\":\"lost\", \"location\":\"53.12,14.35\", \"description\":\"foo\" } }" "http://localhost:8080/v1/users/2/pets"
+
+find all pets
+curl -v "http://localhost:8080/v1/pets"
+curl -v "http://localhost:8080/v1/pets?type=lost&animal=cat&dateTimeStart=2012-07-15T13:22:34.000Z&dateTimeEnd=2012-07-30T13:22:34.000Z&location=abc"
+
+find pet
+curl -v "http://localhost:8080/v1/pets/1"
+
+create shelter
+curl -v -X POST -H "Content-type: application/json" -d "{ \"name\":\"test shelter\", \"description\":\"desc123\" }" "http://localhost:8080/v1/shelters"
+
+find all shelters
+curl -v "http://localhost:8080/v1/shelters"
+
+find shelter
+curl -v "http://localhost:8080/v1/shelters/1"
+
+create user in shelter
+curl -v -X POST -H "Content-type: application/json" -d "{ \"id\":\"1\" }" "http://localhost:8080/v1/shelters/1/users"

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure id="server" class="org.eclipse.jetty.server.Server">
+
+   <Set name="sessionIdManager">
+        <New class="org.eclipse.jetty.server.session.HashSessionIdManager">
+            <Arg>
+                <New class="java.util.Random"/>
+            </Arg>
+            <Set name="workerName">jetty-maven-plugin</Set>
+        </New>
+    </Set>
+
+</Configure>
